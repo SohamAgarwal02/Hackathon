@@ -20,7 +20,7 @@ export const generateRoadmap = async (title, description, deadline, hoursPerDay,
   try {
     const prompt = roadmapPrompt(title, description, deadline, hoursPerDay, level);
     const result = await getGenAI().models.generateContent({
-      model: "gemini-2.5-flash",
+      model: "gemini-1.5-flash",
       contents: prompt,
     });
     const text = result.text;
@@ -35,7 +35,7 @@ export const recalculateRoadmap = async (title, completedTasks, pendingTasks, re
   try {
     const prompt = recalculatePrompt(title, completedTasks, pendingTasks, remainingDays);
     const result = await getGenAI().models.generateContent({
-      model: "gemini-2.5-flash",
+      model: "gemini-1.5-flash",
       contents: prompt,
     });
     const text = result.text;
