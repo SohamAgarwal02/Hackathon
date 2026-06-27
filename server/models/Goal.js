@@ -18,7 +18,7 @@ const taskSchema = new mongoose.Schema({
 
 const goalSchema = new mongoose.Schema(
   {
-    // ADD THIS FIELD
+   
     name: {
       type: String,
       required: true,
